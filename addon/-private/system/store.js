@@ -1332,7 +1332,7 @@ Store = Service.extend({
     import DS from 'ember-data';
 
     export default DS.Adapter.extend({
-      queryRecord(modelName, query) {
+      queryRecord(store, modelClass, query) {
         return Ember.$.getJSON('/api/current_user');
       }
     });
